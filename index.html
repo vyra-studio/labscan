@@ -73,7 +73,7 @@
       "url": "https://github.com/vyra-studio",
       "logo": "https://vyra-studio.github.io/labscan/vyra-logo-1024.png",
       "email": "alviaffan97@gmail.com",
-      "description": "VYRA Studio builds apps of every kind — health, productivity, utilities and more. Makers of LabScan: The Report Scanner."
+      "description": "Independent app studio crafting polished Android apps of every kind — health, productivity, utilities and more. Simple to use, built with care."
     },
     {
       "@type": "FAQPage",
@@ -83,7 +83,7 @@
         { "@type": "Question", "name": "Which languages does LabScan support?", "acceptedAnswer": { "@type": "Answer", "text": "LabScan explains your reports in English, Urdu and Roman Urdu, so you can read your results in the language you understand best." } },
         { "@type": "Question", "name": "Is LabScan free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LabScan is free to download and use, including report explanations, Health Score, manual test checks and medicine reminders." } },
         { "@type": "Question", "name": "Is my health data private in LabScan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LabScan has no server of its own — your reports and health data are stored only on your phone. Report explanations are generated only when you ask Sehat AI to explain a report. See the LabScan Privacy Policy for full details." } },
-        { "@type": "Question", "name": "How do I install LabScan on Android?", "acceptedAnswer": { "@type": "Answer", "text": "Tap the Download button on this page to get the LabScan APK, open the downloaded file, and allow 'Install unknown apps' for your browser if Android asks. The install takes less than a minute. LabScan is also coming soon to Google Play." } },
+        { "@type": "Question", "name": "How do I install LabScan on Android?", "acceptedAnswer": { "@type": "Answer", "text": "Tap the Download button on this page to get the LabScan APK and open the downloaded file. If Android shows a security popup, tap Settings on the popup, turn on 'Allow from this source', go back and tap Install. The whole process takes less than a minute. LabScan is also coming soon to Google Play." } },
         { "@type": "Question", "name": "Does LabScan replace a doctor?", "acceptedAnswer": { "@type": "Answer", "text": "No. LabScan helps you understand your reports in simple words, but it does not diagnose or treat any condition. Always consult a qualified doctor about your results — especially when LabScan flags a value as critical." } }
       ]
     }
@@ -175,6 +175,14 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:24px;color:var(--royal);font-weight:400}
 details[open ] summary::after{content:"–"}
 details p{padding:0 24px 20px;color:var(--slate);font-size:15px}
+/* install box */
+.ibox{max-width:840px;margin:44px auto 0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 30px;box-shadow:0 14px 34px rgba(10,37,64,.06);text-align:left}
+.istep{display:flex;gap:17px;padding:19px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.istep:last-child{border-bottom:none}
+.istep .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--cyan));color:#fff;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.istep h3{font-size:16.5px;font-weight:600;margin-bottom:3px}
+.istep p{color:var(--slate);font-size:14.8px}
+.istep p b{color:var(--ink)}
 /* download band */
 .dl{background:radial-gradient(700px 340px at 50% -20%,rgba(0,194,255,.30),transparent 60%),linear-gradient(150deg,#081C33,var(--navy) 55%,var(--deep));color:#fff;text-align:center}
 .dl h2{color:#fff}
@@ -330,8 +338,23 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
       <details class="reveal"><summary>Which languages does LabScan support?</summary><p>LabScan explains your reports in English, Urdu and Roman Urdu, so you can read your results in the language you understand best.</p></details>
       <details class="reveal"><summary>Is LabScan free?</summary><p>Yes. LabScan is free to download and use, including report explanations, Health Score, manual test checks and medicine reminders.</p></details>
       <details class="reveal"><summary>Is my health data private in LabScan?</summary><p>Yes. LabScan has no server of its own — your reports and health data are stored only on your phone. Report explanations are generated only when you ask Sehat AI to explain a report. See the <a href="https://alviaffan97-hue.github.io/labscan-privacy/" style="color:var(--royal);font-weight:600">LabScan Privacy Policy</a> for full details.</p></details>
-      <details class="reveal"><summary>How do I install LabScan on Android?</summary><p>Tap the Download button on this page to get the LabScan APK, open the downloaded file, and allow "Install unknown apps" for your browser if Android asks. The install takes less than a minute. LabScan is also coming soon to Google Play.</p></details>
+      <details class="reveal"><summary>How do I install LabScan on Android?</summary><p>Tap the Download button on this page to get the LabScan APK and open the downloaded file. If Android shows a security popup, tap Settings on the popup, turn on "Allow from this source", go back and tap Install. The whole process takes less than a minute — see the step-by-step box above. LabScan is also coming soon to Google Play.</p></details>
       <details class="reveal"><summary>Does LabScan replace a doctor?</summary><p>No. LabScan helps you understand your reports in simple words, but it does not diagnose or treat any condition. Always consult a qualified doctor about your results — especially when LabScan flags a value as critical.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="install" style="padding-top:6px">
+  <div class="wrap">
+    <p class="kicker reveal">Installation</p>
+    <h2 class="reveal">How to Install LabScan</h2>
+    <p class="sub reveal">One minute, five small steps — including the one Settings change Android asks for.</p>
+    <div class="ibox reveal">
+      <div class="istep"><span class="n">1</span><div><h3>Download the app</h3><p>Tap the <b>Download</b> button below and save the LabScan APK file.</p></div></div>
+      <div class="istep"><span class="n">2</span><div><h3>Open the file</h3><p>Tap the download notification, or open <b>LabScan-v1.2.4.apk</b> from your Downloads folder.</p></div></div>
+      <div class="istep"><span class="n">3</span><div><h3>Allow the install (one time only)</h3><p>If Android shows a security popup, tap <b>Settings</b> on it, turn ON <b>"Allow from this source"</b>, then press Back.</p></div></div>
+      <div class="istep"><span class="n">4</span><div><h3>Tap Install</h3><p>Press <b>Install</b> and wait a few seconds while LabScan sets up.</p></div></div>
+      <div class="istep"><span class="n">5</span><div><h3>Open LabScan</h3><p>Tap <b>Open</b> — you're ready to scan your first report.</p></div></div>
     </div>
   </div>
 </section>
@@ -348,12 +371,6 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
       </a>
     </div>
     <p class="meta-line" style="margin-top:16px">Version 1.2.4 • 58 MB • Android</p>
-    <div class="install">
-      <span>1. Download the file</span>
-      <span>2. Open it</span>
-      <span>3. Allow install if Android asks</span>
-      <span>4. Done — open LabScan</span>
-    </div>
   </div>
 </section>
 </main>
@@ -363,7 +380,7 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
     <div class="foot">
       <div>
         <div class="studio"><img src="vyra-mark.png" alt="VYRA Studio logo"> VYRA Studio</div>
-        <p style="margin-top:12px;max-width:340px;font-size:14px">We build apps of every kind — health, productivity, utilities and more. Makers of LabScan: The Report Scanner.</p>
+        <p style="margin-top:12px;max-width:340px;font-size:14px">An independent app studio crafting polished Android apps of every kind — health, productivity, utilities and more. Simple to use, built with care.</p>
       </div>
       <div class="foot-links">
         <a href="#features">Features</a>
