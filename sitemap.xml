@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://vyra-studio.github.io/labscan/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://vyra-studio.github.io/labscan/og-image.jpg</image:loc><image:title>LabScan: The Report Scanner</image:title></image:image>
+    <image:image><image:loc>https://vyra-studio.github.io/labscan/panel-1.jpg</image:loc><image:title>LabScan home screen with Health Score</image:title></image:image>
+    <image:image><image:loc>https://vyra-studio.github.io/labscan/panel-2.jpg</image:loc><image:title>Sehat AI report scanner</image:title></image:image>
+    <image:image><image:loc>https://vyra-studio.github.io/labscan/panel-4.jpg</image:loc><image:title>LabScan Reports and Trend Tracker</image:title></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://vyra-studio.github.io/labscan/poster.jpg</video:thumbnail_loc>
+      <video:title>LabScan — See How It Works</video:title>
+      <video:description>Watch LabScan scan a lab report and explain it in simple words with Sehat AI.</video:description>
+      <video:content_loc>https://vyra-studio.github.io/labscan/promo.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+    </video:video>
+  </url>
+</urlset>

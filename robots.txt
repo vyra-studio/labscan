@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vyra-studio.github.io/labscan/sitemap.xml
