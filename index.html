@@ -98,10 +98,11 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{max-width:100%}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 /* nav */
 nav{position:sticky;top:0;z-index:60;background:rgba(10,37,64,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-in{display:flex;align-items:center;gap:14px;height:66px}
@@ -111,31 +112,35 @@ nav{position:sticky;top:0;z-index:60;background:rgba(10,37,64,.92);backdrop-filt
 .nav-links{margin-left:auto;display:flex;align-items:center;gap:30px}
 .nav-links a{color:var(--soft);font-size:14.5px;font-weight:500}
 .nav-links a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--royal),var(--cyan));color:#fff;font-weight:600;font-size:15.5px;padding:13px 26px;border-radius:999px;box-shadow:0 12px 30px rgba(21,101,216,.35);transition:transform .18s ease,box-shadow .18s ease;border:none;cursor:pointer}
-.btn:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(21,101,216,.45)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--royal);color:#fff;font-weight:600;font-size:15.5px;padding:13px 26px;border-radius:999px;box-shadow:0 12px 30px rgba(21,101,216,.30);transition:transform .18s ease,box-shadow .18s ease,background .18s ease;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-2px);background:#0F56BD;box-shadow:0 18px 38px rgba(21,101,216,.38)}
 .btn.small{padding:9px 20px;font-size:14px}
-.btn.ghost{background:rgba(255,255,255,.08);box-shadow:none;border:1px solid rgba(255,255,255,.25)}
+.btn.ghost{background:#fff;color:var(--navy);box-shadow:0 8px 22px rgba(10,37,64,.08);border:1px solid var(--line)}
+.btn.ghost:hover{background:#F0F6FF}
 @media(max-width:760px){.nav-links a{display:none}}
 /* hero */
-.hero{background:radial-gradient(1100px 540px at 85% -10%,rgba(0,194,255,.28),transparent 60%),radial-gradient(800px 500px at -10% 110%,rgba(21,101,216,.35),transparent 55%),linear-gradient(150deg,#081C33 0%,var(--navy) 45%,var(--deep) 100%);color:#fff;overflow:hidden}
-.hero-in{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;padding:74px 0 84px}
-@media(max-width:900px){.hero-in{grid-template-columns:1fr;padding:52px 0 64px}}
-.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);color:var(--soft);font-size:12.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:7px 15px;border-radius:999px}
+.hero{background:radial-gradient(900px 480px at 88% -10%,rgba(0,194,255,.13),transparent 60%),radial-gradient(720px 460px at -12% 112%,rgba(21,101,216,.10),transparent 55%),linear-gradient(180deg,#FFFFFF 0%,#F7FAFF 100%);color:var(--ink);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:44px;align-items:center;padding:76px 0 86px}
+@media(max-width:900px){.hero-in{grid-template-columns:minmax(0,1fr);padding:54px 0 66px}}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:12.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:8px 16px;border-radius:999px;box-shadow:0 6px 18px rgba(10,37,64,.07);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;cursor:pointer}
+.pill:hover{border-color:var(--cyan);transform:translateY(-1px);box-shadow:0 10px 24px rgba(10,37,64,.12)}
 .pill img{width:18px;height:18px;border-radius:5px}
-h1{font-size:52px;line-height:1.12;font-weight:800;margin:22px 0 6px}
-h1 .thin{display:block;font-size:30px;font-weight:600;color:var(--bcyan);letter-spacing:.2px}
-@media(max-width:560px){h1{font-size:38px}h1 .thin{font-size:23px}}
-.lede{font-size:18.5px;color:#D9E9FA;max-width:540px;margin-top:14px}
-.lede strong{color:#fff}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;align-items:center}
-.meta-line{margin-top:14px;font-size:13.5px;color:var(--soft)}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
-.chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#EAF4FF;font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px}
+.pill .arr{color:var(--royal);font-weight:700;letter-spacing:0}
+h1{font-size:54px;line-height:1.1;font-weight:800;margin:24px 0 6px;color:var(--navy)}
+h1 .thin{display:block;font-size:31px;font-weight:700;color:var(--royal);letter-spacing:.2px;margin-top:4px}
+@media(max-width:560px){h1{font-size:40px}h1 .thin{font-size:24px}}
+.lede{font-size:18.5px;color:var(--slate);max-width:540px;margin-top:16px}
+.lede strong{color:var(--ink)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;align-items:center}
+.meta-line{margin-top:15px;font-size:13.5px;color:#7186A0}
+.dl .meta-line{color:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.chip{background:#EFF6FF;border:1px solid var(--line);color:var(--navy);font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px}
 /* phone + video */
-.phone-stage{display:flex;justify-content:center;perspective:1400px}
-.phone{width:min(320px,80vw);background:#030D1C;padding:11px;border-radius:46px;box-shadow:0 44px 90px rgba(0,0,0,.55),0 0 110px rgba(0,180,216,.35);transform:rotateY(-9deg) rotateX(2deg)}
-.phone video{width:100%;aspect-ratio:9/19.5;object-fit:cover;border-radius:36px;background:#081C33}
-.phone-cap{text-align:center;color:var(--soft);font-size:13px;margin-top:16px}
+.phone-stage{display:flex;justify-content:center;perspective:1400px;min-width:0}
+.phone{width:min(320px,78vw);background:#030D1C;padding:11px;border-radius:46px;box-shadow:0 34px 70px rgba(10,37,64,.28),0 0 90px rgba(0,180,216,.25);transform:rotateY(-9deg) rotateX(2deg)}
+.phone video{width:100%;aspect-ratio:9/19.5;object-fit:cover;border-radius:36px;background:#081C33;display:block}
+.phone-cap{text-align:center;color:#7186A0;font-size:13px;margin-top:16px}
 /* sections */
 section{padding:78px 0}
 .kicker{color:var(--royal);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-align:center}
@@ -179,7 +184,7 @@ details p{padding:0 24px 20px;color:var(--slate);font-size:15px}
 .ibox{max-width:840px;margin:44px auto 0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 30px;box-shadow:0 14px 34px rgba(10,37,64,.06);text-align:left}
 .istep{display:flex;gap:17px;padding:19px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
 .istep:last-child{border-bottom:none}
-.istep .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--cyan));color:#fff;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.istep .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:var(--royal);color:#fff;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;margin-top:2px}
 .istep h3{font-size:16.5px;font-weight:600;margin-bottom:3px}
 .istep p{color:var(--slate);font-size:14.8px}
 .istep p b{color:var(--ink)}
@@ -218,7 +223,7 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
 <header class="hero" id="top">
   <div class="wrap hero-in">
     <div>
-      <span class="pill"><img src="vyra-mark.png" alt="VYRA Studio logo"> By VYRA Studio</span>
+      <a class="pill" href="https://github.com/vyra-studio" target="_blank" rel="noopener" title="Visit the VYRA Studio profile"><img src="vyra-mark.png" alt="VYRA Studio logo"> By VYRA Studio <span class="arr">&rarr;</span></a>
       <h1>LabScan <span class="thin">The Report Scanner</span></h1>
       <p class="lede">Your lab report just arrived — but do you really understand it? <strong>LabScan scans your report and Sehat AI explains every value in simple words</strong>, in English, Urdu and Roman Urdu.</p>
       <div class="hero-cta">
@@ -240,7 +245,7 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
     <div class="phone-stage">
       <div>
         <div class="phone">
-          <video src="promo.mp4" poster="poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="LabScan app demo video"></video>
+          <video src="promo.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="LabScan app demo video"></video>
         </div>
         <p class="phone-cap">Watch LabScan in action — 50 seconds</p>
       </div>
@@ -249,6 +254,22 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
 </header>
 
 <main>
+<section id="screenshots" class="gal-wrap" style="padding-top:64px">
+  <div class="wrap">
+    <p class="kicker reveal">Screenshots</p>
+    <h2 class="reveal">Inside LabScan</h2>
+    <p class="sub reveal">Real screens from the app — clean, simple and made for everyone.</p>
+    <div class="gal">
+      <figure><img src="panel-1.jpg" alt="LabScan home screen with Health Score and Scan Report" loading="lazy"><figcaption>Home — your health at a glance</figcaption></figure>
+      <figure><img src="panel-2.jpg" alt="Sehat AI — scan a report or check manually" loading="lazy"><figcaption>Sehat AI — scan or check</figcaption></figure>
+      <figure><img src="panel-3.jpg" alt="Ask Sehat AI to explain a lab report in simple words" loading="lazy"><figcaption>Explanations in simple words</figcaption></figure>
+      <figure><img src="panel-4.jpg" alt="LabScan reports with Trend Tracker graph" loading="lazy"><figcaption>Reports &amp; Trend Tracker</figcaption></figure>
+      <figure><img src="panel-5.jpg" alt="LabScan medicine reminders with ringing alarm" loading="lazy"><figcaption>Reminders that ring on time</figcaption></figure>
+      <figure><img src="panel-6.jpg" alt="LabScan manual check for any test value" loading="lazy"><figcaption>Manual Check</figcaption></figure>
+      <figure><img src="panel-7.jpg" alt="LabScan built-in test library with 64 plus tests" loading="lazy"><figcaption>64+ tests built in</figcaption></figure>
+    </div>
+  </div>
+</section>
 <section id="about">
   <div class="wrap">
     <p class="kicker reveal">What is LabScan?</p>
@@ -311,22 +332,6 @@ footer{background:#061A30;color:var(--soft);padding:52px 0 34px}
   </div>
 </section>
 
-<section id="screenshots" class="gal-wrap" style="padding-top:64px">
-  <div class="wrap">
-    <p class="kicker reveal">Screenshots</p>
-    <h2 class="reveal">Inside LabScan</h2>
-    <p class="sub reveal">Real screens from the app — clean, simple and made for everyone.</p>
-    <div class="gal">
-      <figure><img src="panel-1.jpg" alt="LabScan home screen with Health Score and Scan Report" loading="lazy"><figcaption>Home — your health at a glance</figcaption></figure>
-      <figure><img src="panel-2.jpg" alt="Sehat AI — scan a report or check manually" loading="lazy"><figcaption>Sehat AI — scan or check</figcaption></figure>
-      <figure><img src="panel-3.jpg" alt="Ask Sehat AI to explain a lab report in simple words" loading="lazy"><figcaption>Explanations in simple words</figcaption></figure>
-      <figure><img src="panel-4.jpg" alt="LabScan reports with Trend Tracker graph" loading="lazy"><figcaption>Reports &amp; Trend Tracker</figcaption></figure>
-      <figure><img src="panel-5.jpg" alt="LabScan medicine reminders with ringing alarm" loading="lazy"><figcaption>Reminders that ring on time</figcaption></figure>
-      <figure><img src="panel-6.jpg" alt="LabScan manual check for any test value" loading="lazy"><figcaption>Manual Check</figcaption></figure>
-      <figure><img src="panel-7.jpg" alt="LabScan built-in test library with 64 plus tests" loading="lazy"><figcaption>64+ tests built in</figcaption></figure>
-    </div>
-  </div>
-</section>
 
 <section id="faq" style="padding-top:10px">
   <div class="wrap">
